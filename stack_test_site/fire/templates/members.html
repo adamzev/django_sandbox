@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <ul>
+    {% for firefighter in firefighters %}
+      <li> {{firefighter.rank}} {{firefighter.first_name}} {{firefighter.last_name}} {{firefighter.start_date}}</li>
+    {% endfor %}
+  </ul>
+{% endblock content %}

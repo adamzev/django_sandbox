@@ -1,0 +1,21 @@
+<html>
+<head>
+
+</head>
+<body>
+    <div class="page-header">
+        {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}" class="top-menu"><button type="button" class="btn btn-danger">Logout</button></a>
+        <a href="{% url 'logout' %}" class="top-menu"><button type="button" class="btn btn-default">Account</button></a>
+        <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        {% endif %}
+
+
+        {% if user.is_anonymous %}
+        {% endif %}
+
+    <div class="fieldWrapper">
+        <label for="{{ category_form.category.id_for_label }}">Select a category:</label>
+        {{ category_form.category }}
+    </div>
+</html>
